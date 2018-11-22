@@ -17,7 +17,7 @@ $ chmod a+x ˜/bin/lein
 $ echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
 
 # Run lein and it will download the self-install package
-$lein
+$ lein
 ```
 ### Usage
 Compile + Run:
