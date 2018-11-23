@@ -1,8 +1,10 @@
 # 
+**[Anglican](#Anglican)**<br>
+**[WebPPL](#WebPPL)**<br>
+
 ## Anglican
 The source code can be found under: PPLs-HAR/Anglican/abc/src/core.clj .
 ### Installation
-------------
 Installing Leiningen (Anglican):
 ```shell
 # Download lein script and place to your $PATH
@@ -35,7 +37,7 @@ Also, there is provided a standalone .jar. Run this simply with Java.
 $ cd PPLs-HAR/Anglican/
 $ java -jar abc--standalone.jar number-samples number-persons number-printjobs printer-jammed?(true/false) number-obs(max is 25) inference-method
 
-#e.g. 
+# e.g. 
 $ java -jar abc--standalone.jar 100 3 3 true 25 smc
 ```
 
@@ -51,3 +53,20 @@ $ java -jar abc--standalone.jar 100 3 3 true 25 smc
 |   pimh    |  Particle independent Metropolis-Hastings | 
 |   pgas    | 	Particle Gibbs with ancestor sampling  | 
 |    pmcmc   |  	Interacting particle Markov chain Monte Carlo | 
+
+
+--------------------------
+## WebPPL
+The source code can be found under: PPLs-HAR/WebPPL/abc.js .
+
+### Installation
++ Install [node.js](<https://nodejs.org/en/>)
++ Install WebPPL by running: ``` npm install -g webppl ```
+
+### Usage
+```shell
+$ cd PPLs-HAR/WebPPL
+$ webppl abc.js -- nSamples nPers nPJ jammed?(true/false) nObs(max is 25) algorithm(SMC or incrementalMH)
+# e.g. 
+$ webppl abc.js -- 1000 3 3 true 25 SMC)
+```
