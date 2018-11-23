@@ -1,13 +1,14 @@
 # 
 **[Anglican](#Anglican)**<br>
 **[WebPPL](#WebPPL)**<br>
+**[Figaro](#Figaro)**<br>
 
 ## Anglican
 The source code can be found under: PPLs-HAR/Anglican/abc/src/core.clj .
 ### Installation
 Installing Leiningen (Anglican):
 ```shell
-# Download lein script and place to your $PATH
+# Download lein script and place it to your $PATH
 $ mkdir ~/bin
 $ cd ~/bin
 $ wget http://git.io/XyijMQ
@@ -70,3 +71,22 @@ $ webppl abc.js -- nSamples nPers nPJ jammed?(true/false) nObs(max is 25) algori
 # e.g. 
 $ webppl abc.js -- 1000 3 3 true 25 SMC)
 ```
+
+## Figaro
+The source code can be found under: PPLs-HAR/Figaro/Abc.scala .
+
+### Installation
+The current version of Figaro, as of November 2018, is 5.0.0, and is available for Scala 2.12 and Scala 2.11.
++ Download the Scala binaries from: https://www.scala-lang.org/download/ and follow the installation guide at http://scala-lang.org/download/install.html.
++ Download Figaro from https://www.cra.com/figaro.
++ The directory, Figaro is installed to, contains the Figaro jar. The jar name ends with "fat". Remember this directory, as you will need it to run Figaro programs.
+
+### Usage
+Assuming the Figaro jar name is “figaro_2.12-5.0.0.0-fat.jar” and is in the “/Applications/figaro” directory, you can run:
+```shell
+$ cd PPLs-HAR/Figaro
+$ scala -cp /Applications/figaro/figaro_2.12-5.0.0.0-fat.jar Abc.scala nSamples nPers nPJ jammed?(true/false) nObs(max is 25)
+# e.g. 
+$ scala -cp /Applications/figaro/figaro_2.12-5.0.0.0-fat.jar Abc.scala 1000 3 3 true 25
+```
+
