@@ -1,10 +1,14 @@
-# 
+#
+This project contains three implementations of a causal probabilistic model for human activity recognition. The purpose is (1) to see whether one can easily implement causal, generative probabilistic models in PPLs, and (2) to compare inference performance of different PPLs. 
+All three implementations implement and allow to perform inference in the office scenario [described here.](<https://dx.doi.org/10.1145/2370216.2370443>). 
+
+
 **[Anglican](#Anglican)**<br>
 **[WebPPL](#WebPPL)**<br>
 **[Figaro](#Figaro)**<br>
 
 ## Anglican
-The source code can be found under: PPLs-HAR/Anglican/abc/src/core.clj .
+The source code can be found at: PPLs-HAR/Anglican/abc/src/core.clj .
 ### Installation
 Installing Leiningen (Anglican):
 ```shell
@@ -33,7 +37,7 @@ $ lein run 100 3 3 true 25 smc
 ```
 
 #### Standalone JAR
-Also, there is provided a standalone .jar. Run this simply with Java.
+Alternatively, a standalone .jar is provided which can be run with Java:
 ```shell
 $ cd PPLs-HAR/Anglican/
 $ java -jar abc--standalone.jar number-samples number-persons number-printjobs printer-jammed?(true/false) number-obs(max is 25) inference-method
@@ -58,7 +62,7 @@ $ java -jar abc--standalone.jar 100 3 3 true 25 smc
 
 --------------------------
 ## WebPPL
-The source code can be found under: PPLs-HAR/WebPPL/abc.js .
+The source code can be found at: PPLs-HAR/WebPPL/abc.js .
 
 ### Installation
 + Install [node.js](<https://nodejs.org/en/>)
@@ -73,10 +77,10 @@ $ webppl abc.js -- 1000 3 3 true 25 SMC)
 ```
 
 ## Figaro
-The source code can be found under: PPLs-HAR/Figaro/Abc.scala .
+The source code can be found at: PPLs-HAR/Figaro/Abc.scala .
 
 ### Installation
-The current version of Figaro, as of November 2018, is 5.0.0, and is available for Scala 2.12 and Scala 2.11.
+The current version of Figaro, as of November 2018 is 5.0.0, and is available for Scala 2.12 and Scala 2.11.
 + Download the Scala binaries from: https://www.scala-lang.org/download/ and follow the installation guide at http://scala-lang.org/download/install.html.
 + Download Figaro from https://www.cra.com/figaro.
 + The directory, Figaro is installed to, contains the Figaro jar. The jar name ends with "fat". Remember this directory, as you will need it to run Figaro programs.
@@ -89,4 +93,3 @@ $ scala -cp /Applications/figaro/figaro_2.12-5.0.0.0-fat.jar Abc.scala nSamples 
 # e.g. 
 $ scala -cp /Applications/figaro/figaro_2.12-5.0.0.0-fat.jar Abc.scala 1000 3 3 true 25
 ```
-
