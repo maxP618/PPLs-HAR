@@ -73,8 +73,15 @@ The source code can be found at: PPLs-HAR/WebPPL/abc.js .
 $ cd PPLs-HAR/WebPPL
 $ webppl abc.js -- nSamples nPers nPJ jammed?(true/false) nObs(max is 25) algorithm(SMC or incrementalMH)
 # e.g. 
-$ webppl abc.js -- 1000 3 3 true 25 SMC)
+$ webppl abc.js -- 1000 3 3 true 25 SMC
 ```
+
+#### Supported Inference methods:
+| Method       | Description         |
+| ------------- |:-------------------------:|
+| SMC    |  Sequential Monte Carlo |
+| incrementalMH      | Lightweight Incrementalized MCMC     | 
+
 
 ## Figaro
 The source code can be found at: PPLs-HAR/Figaro/Abc.scala .
@@ -93,3 +100,7 @@ $ scala -cp /Applications/figaro/figaro_2.12-5.0.0.0-fat.jar Abc.scala nSamples 
 # e.g. 
 $ scala -cp /Applications/figaro/figaro_2.12-5.0.0.0-fat.jar Abc.scala 1000 3 3 true 25
 ```
+#### Supported Inference methods:
+| Method       | Description         |
+| ------------- |:-------------------------:|
+| Particle Filter  |  Sequential Monte Carlo |
