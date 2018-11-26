@@ -82,6 +82,7 @@ $ webppl abc.js -- 1000 3 3 true 25 SMC
 | SMC    |  Sequential Monte Carlo |
 | incrementalMH      | Lightweight Incrementalized MCMC     | 
 
+--------------------------
 
 ## Figaro
 The source code can be found at: PPLs-HAR/Figaro/Abc.scala .
