@@ -10,15 +10,16 @@ All three implementations implement and allow to perform inference in the office
 ## Anglican
 The source code can be found at: PPLs-HAR/Anglican/abc/src/core.clj .
 ### Installation
-Installing Leiningen (Anglican):
+Installing Leiningen (requires Java):
 ```shell
 # Download lein script and place it to your $PATH
 $ mkdir ~/bin
 $ cd ~/bin
 $ wget http://git.io/XyijMQ
+$ mv XyijMQ lein
 
 # Make executable
-$ chmod a+x ˜/bin/lein
+$ chmod a+x ~/bin/lein
 
 # Add ~/bin to path
 $ echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
@@ -88,18 +89,18 @@ $ webppl abc.js -- 1000 3 3 true 25 SMC
 The source code can be found at: PPLs-HAR/Figaro/Abc.scala .
 
 ### Installation
-The current version of Figaro, as of November 2018 is 5.0.0, and is available for Scala 2.12 and Scala 2.11.
+We recommend to use Figaro 5.0 with Scala 2.11 (which are the versions that our program was tested with).
 + Download the Scala binaries from: https://www.scala-lang.org/download/ and follow the installation guide at http://scala-lang.org/download/install.html.
-+ Download Figaro from https://www.cra.com/figaro.
-+ The directory, Figaro is installed to, contains the Figaro jar. The jar name ends with "fat". Remember this directory, as you will need it to run Figaro programs.
++ Download Figaro 5.0 for Scala 2.11 from https://www.cra.com/figaro.
++ The directory that Figaro is installed into contains the Figaro jar. The jar name ends with "fat". Remember this directory, as you will need it to run Figaro programs.
 
 ### Usage
-Assuming the Figaro jar name is “figaro_2.12-5.0.0.0-fat.jar” and is in the “/Applications/figaro” directory, you can run:
+Assuming the Figaro jar name is “figaro_2.11-5.0.0.0-fat.jar” and is in the “/Applications/figaro” directory, you can run:
 ```shell
 $ cd PPLs-HAR/Figaro
-$ scala -cp /Applications/figaro/figaro_2.12-5.0.0.0-fat.jar Abc.scala nSamples nPers nPJ jammed?(true/false) nObs(max is 25)
+$ scala -cp /Applications/figaro/figaro_2.11-5.0.0.0-fat.jar Abc.scala nSamples nPers nPJ jammed?(true/false) nObs(max is 25)
 # e.g. 
-$ scala -cp /Applications/figaro/figaro_2.12-5.0.0.0-fat.jar Abc.scala 1000 3 3 true 25
+$ scala -cp /Applications/figaro/figaro_2.11-5.0.0.0-fat.jar Abc.scala 1000 3 3 true 25
 ```
 #### Supported Inference methods:
 | Method       | Description         |
